@@ -21,7 +21,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #e7e7e7;
+  background: #484092;
 }
 
 .app {
@@ -35,13 +35,11 @@ body {
 }
 
 .list {
-  width: 100vw;
+  width: 50vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#171735), to(#4f4fbb));
-  background: linear-gradient(#171735, #4f4fbb);
   padding: 1rem;
   color: white;
   padding: 25px;
@@ -122,6 +120,7 @@ body {
 }
 
 .list .listitem .todo {
+  margin-left: 1vw;
   font-size: 2.7rem;
   max-width: 70%;
 }
@@ -159,19 +158,18 @@ body {
 }
 
 .list .listitem .buttonbox .remove {
-  background: red;
+  background: #d44242;
 }
 
 .list .listitem .buttonbox .remove:hover {
-  background: rgba(255, 0, 0, 0.315);
+  background: #7e0c0c;
 }
 
 .list .listitem .buttonbox .complete,
 .list .listitem .buttonbox .remove,
 .list .listitem .buttonbox .uncomplete {
-  width: 0px;
-  padding-left: 200%;
-  height: 100%;
+  width: 5vh;
+  height: 5vh;
   border-radius: 8px;
   -webkit-transition: 0.7s all ease;
   transition: 0.7s all ease;

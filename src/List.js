@@ -6,12 +6,9 @@ const Listcontainer = (props) => {
   const [list, setlist] = useState({});
   return (
     <div className="list">
-      <h1>{props.title ? props.title : null}</h1>
-      <p>{props.description ? props.description : null}</p>
       <Listitem />
       <Listitem />
       <Listitem />
-
       <Listitem />
       <Listitem />
       <Listitem />

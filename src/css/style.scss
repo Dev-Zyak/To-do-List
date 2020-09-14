@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(231, 231, 231);
+  background: rgb(72, 64, 146);
 }
 
 .app {
@@ -22,10 +22,9 @@ body {
 }
 
 .list {
-  width: 100vw;
+  width: 50vw;
   height: fit-content;
   min-height: 100vh;
-  background: linear-gradient(rgb(23, 23, 53), rgb(79, 79, 187));
   padding: 1rem;
   color: white;
   padding: 25px;
@@ -81,6 +80,7 @@ body {
     );
 
     .todo {
+      margin-left: 1vw;
       font-size: 2.7rem;
       max-width: 70%;
     }
@@ -110,19 +110,18 @@ body {
       }
 
       .remove {
-        background: red;
+        background: rgb(212, 66, 66);
 
         &:hover {
-          background: rgba(255, 0, 0, 0.315);
+          background: rgb(126, 12, 12);
         }
       }
 
       .complete,
       .remove,
       .uncomplete {
-        width: 0px;
-        padding-left: 200%;
-        height: 100%;
+        width: 5vh;
+        height: 5vh;
         border-radius: 8px;
         transition: 0.7s all ease;
         cursor: pointer;
