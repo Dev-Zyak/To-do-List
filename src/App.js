@@ -1,5 +1,4 @@
 import React from "react";
-import Loginout from "./Loginout";
 import "./css/style.css";
 import List from "./List";
 

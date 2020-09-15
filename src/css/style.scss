@@ -1,3 +1,5 @@
+$main: rgb(51, 161, 106);
+
 :root {
   font-size: 10px;
 }
@@ -22,7 +24,7 @@ body {
 }
 
 .list {
-  width: 50vw;
+  width: 100vw;
   height: fit-content;
   min-height: 100vh;
   padding: 1rem;
@@ -33,6 +35,8 @@ body {
   align-items: center;
   min-width: 50vw;
   max-width: 100vw;
+  overflow-y: scroll;
+
   h1 {
     text-align: center;
     font-size: 4rem;
@@ -41,6 +45,58 @@ body {
   p {
     text-align: center;
     font-size: 1.6rem;
+  }
+
+  .modal {
+    transition: 0.3s all ease;
+    width: 100vw;
+    height: 0vh;
+    background: rgb(237, 238, 240);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $main;
+
+    form {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: fit-content;
+      justify-content: center;
+
+      input {
+        height: 4vh;
+        width: 50%;
+        padding-left: 10px;
+        outline: none;
+        border: 1px solid $main;
+      }
+
+      button {
+        width: 4vh;
+        height: 100%;
+        margin-left: 1vh;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: $main;
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .modal_show {
+    transition: 3.3s height ease;
+    display: flex;
+    height: 100vh;
   }
 
   .additem {
@@ -110,11 +166,44 @@ body {
       }
 
       .remove {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background: rgb(212, 66, 66);
-
+        position: relative;
         &:hover {
           background: rgb(126, 12, 12);
         }
+
+        .left,
+        .right {
+          height: 2vh;
+          width: 0.3vh;
+          background: white;
+          border-radius: 25px;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: auto;
+          right: auto;
+          margin: auto;
+          transition: 0.5s all ease;
+        }
+
+        .left {
+          transform: rotateZ(45deg);
+        }
+        .right {
+          transform: rotateZ(-45deg);
+        }
+      }
+
+      .remove:hover > .left {
+        transform: rotateZ(-45deg);
+      }
+      .remove:hover > .right {
+        transform: rotateZ(45deg);
       }
 
       .complete,
@@ -122,7 +211,7 @@ body {
       .uncomplete {
         width: 5vh;
         height: 5vh;
-        border-radius: 8px;
+        border-radius: 50%;
         transition: 0.7s all ease;
         cursor: pointer;
         margin-left: 1vw;

@@ -35,7 +35,7 @@ body {
 }
 
 .list {
-  width: 50vw;
+  width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -55,6 +55,7 @@ body {
           align-items: center;
   min-width: 50vw;
   max-width: 100vw;
+  overflow-y: scroll;
 }
 
 .list h1 {
@@ -65,6 +66,78 @@ body {
 .list p {
   text-align: center;
   font-size: 1.6rem;
+}
+
+.list .modal {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  width: 100vw;
+  height: 0vh;
+  background: #edeef0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #33a16a;
+}
+
+.list .modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list .modal form input {
+  height: 4vh;
+  width: 50%;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #33a16a;
+}
+
+.list .modal form button {
+  width: 4vh;
+  height: 100%;
+  margin-left: 1vh;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #33a16a;
+  color: white;
+  font-size: 2rem;
+}
+
+.list .modal_show {
+  -webkit-transition: 3.3s height ease;
+  transition: 3.3s height ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
 }
 
 .list .additem {
@@ -158,11 +231,61 @@ body {
 }
 
 .list .listitem .buttonbox .remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #d44242;
+  position: relative;
 }
 
 .list .listitem .buttonbox .remove:hover {
   background: #7e0c0c;
+}
+
+.list .listitem .buttonbox .remove .left,
+.list .listitem .buttonbox .remove .right {
+  height: 2vh;
+  width: 0.3vh;
+  background: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: auto;
+  right: auto;
+  margin: auto;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.list .listitem .buttonbox .remove .left {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.list .listitem .buttonbox .remove .right {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.list .listitem .buttonbox .remove:hover > .left {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.list .listitem .buttonbox .remove:hover > .right {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
 .list .listitem .buttonbox .complete,
@@ -170,7 +293,7 @@ body {
 .list .listitem .buttonbox .uncomplete {
   width: 5vh;
   height: 5vh;
-  border-radius: 8px;
+  border-radius: 50%;
   -webkit-transition: 0.7s all ease;
   transition: 0.7s all ease;
   cursor: pointer;

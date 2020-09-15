@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import Todo from "./Todo";
-import Complete from "./Complete";
-import Uncomplete from "./Uncomplete";
 import Remove from "./Remove";
 
 const Listitem = (props) => {
   return (
     <div className="listitem">
-      <Todo todo={"Todo example"} />
+      <Todo todo={props.todo} />
       <div className="buttonbox">
-        <Remove />
+        <Remove id={props.index} removetodo={props.removetodo} />
       </div>
     </div>
   );
