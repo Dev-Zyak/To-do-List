@@ -1,6 +1,6 @@
 {
   "short_name": "ToDo",
-  "name": "ToDo app by Conor Hutton",
+  "name": "ToDo list app by Conor Hutton",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "conorhutton.com/todo/",
   "display": "standalone",
-  "theme_color": "#484092",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "background_color": "#484092"
 }
