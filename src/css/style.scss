@@ -1,4 +1,4 @@
-$main: rgb(51, 161, 106);
+$main: rgb(72, 64, 146);
 
 :root {
   font-size: 10px;
@@ -119,6 +119,8 @@ body {
   }
 
   .listitem {
+    transition: 1s ease height;
+    height: 0px;
     width: 100%;
     height: fit-content;
     min-height: 50px;

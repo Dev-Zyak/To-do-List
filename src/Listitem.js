@@ -7,7 +7,11 @@ const Listitem = (props) => {
     <div className="listitem">
       <Todo todo={props.todo} />
       <div className="buttonbox">
-        <Remove id={props.index} removetodo={props.removetodo} />
+        <Remove
+          id={props.index}
+          removetodo={props.removetodo}
+          todo={props.todo}
+        />
       </div>
     </div>
   );

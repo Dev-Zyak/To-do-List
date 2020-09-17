@@ -167,6 +167,9 @@ body {
 }
 
 .list .listitem {
+  -webkit-transition: 1s ease height;
+  transition: 1s ease height;
+  height: 0px;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
